@@ -1,0 +1,9 @@
+[build]
+  functions = "netlify/functions"  # Points to your functions directory
+
+[[headers]]
+  for = "/.netlify/functions/*"    # Applies to all functions
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
